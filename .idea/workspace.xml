@@ -8,6 +8,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -25,6 +39,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.twu.biblioteca" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -37,13 +56,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.twu.biblioteca in biblioteca">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.Menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,7 +74,7 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.Menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,7 +89,7 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.Menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,7 +104,7 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.Menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,7 +119,7 @@
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="PATTERN" value="com.twu.biblioteca.Menu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
         <item itemvalue="JUnit.BookTest" />
         <item itemvalue="JUnit.BookPrinterTest" />
         <item itemvalue="JUnit.WelcomeMessagePrinterTest" />
@@ -130,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571051103889</updated>
-      <workItem from="1571051105138" duration="8115000" />
+      <workItem from="1571051105138" duration="10734000" />
     </task>
     <servers />
   </component>
