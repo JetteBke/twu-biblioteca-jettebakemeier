@@ -22,9 +22,9 @@ public class BookPrinterTest {
 
     @Test
     public void shouldPrintBooks() {
-        Book HarryPotter = new Book("Harry Potter");
-        Book HarryPotter2 = new Book("Harry Potter and the chamber of secrets");
-        Book HarryPotter3 = new Book("Harry Potter and the prisoner of ascaban");
+        Book HarryPotter = new Book("Harry Potter", "JK Rolling", "1998");
+        Book HarryPotter2 = new Book("Harry Potter and the chamber of secrets", "JK Rolling", "2002");
+        Book HarryPotter3 = new Book("Harry Potter and the prisoner of ascaban", "JK Rolling", "2005");
         List<Book> books = new ArrayList<Book>();
         books.add(HarryPotter);
         books.add(HarryPotter2);
