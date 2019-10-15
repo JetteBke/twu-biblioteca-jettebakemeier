@@ -25,12 +25,10 @@ public class BookPrinterTest {
         Book HarryPotter = new Book("Harry Potter", "JK Rolling", "1998");
         Book HarryPotter2 = new Book("Harry Potter and the chamber of secrets", "JK Rolling", "2002");
         Book HarryPotter3 = new Book("Harry Potter and the prisoner of ascaban", "JK Rolling", "2005");
-        List<Book> books = new ArrayList<Book>();
-        books.add(HarryPotter);
-        books.add(HarryPotter2);
-        books.add(HarryPotter3);
         BookPrinter bookPrinter = new BookPrinter();
-        bookPrinter.printBooks(books);
+        SampleBooks sampleBooks = new SampleBooks();
+        List<Book> books = sampleBooks.Sample();
+        bookPrinter.printBooks((ArrayList<Book>) books);
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(HarryPotter.toString()+System.lineSeparator()+HarryPotter2.toString()+System.lineSeparator()+HarryPotter3.toString()+System.lineSeparator()));
     }
 }

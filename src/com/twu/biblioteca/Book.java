@@ -7,6 +7,7 @@ public class Book {
     private String title;
     private String author;
     private Year year;
+    private Boolean checkedOut = false;
 
     public Book(String title, String author, Year year) {
         this.title = title;
@@ -30,8 +31,12 @@ public class Book {
         return year;
     }
 
+    public Boolean getCheckedOut() { return checkedOut; }
+
+    public void setCheckedOut() { checkedOut = !checkedOut; }
+
     @Override
     public String toString() {
-        return "Book info - title: " + this.title + ", author: " + this.author + ", year: " + this.year;
+        return "Book info - title: " + this.title + ", author: " + this.author + ", year: " + this.year + " checked out: " + this.checkedOut;
     }
 }

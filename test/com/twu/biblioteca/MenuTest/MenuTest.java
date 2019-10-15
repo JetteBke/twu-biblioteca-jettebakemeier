@@ -1,7 +1,9 @@
 package com.twu.biblioteca.MenuTest;
 
 import com.twu.biblioteca.Book;
+import com.twu.biblioteca.BookPrinter;
 import com.twu.biblioteca.Menu.BookPrintOption;
+import com.twu.biblioteca.Menu.CheckOutBookOption;
 import com.twu.biblioteca.Menu.Menu;
 import com.twu.biblioteca.Menu.QuitAppOption;
 import org.junit.Before;
@@ -27,7 +29,7 @@ public class MenuTest {
     @Test
     public void shouldDisplayBookPrintOption() {
         String menuOption = "1. Show all books\n";
-        BookPrintOption bookPrintOption = new BookPrintOption();
+        BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
         Menu menu = new Menu();
         menu.registerMenuOption(bookPrintOption);
         menu.printMenu();
@@ -38,7 +40,7 @@ public class MenuTest {
      public void shouldRunOption() {
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        BookPrintOption bookPrintOption = new BookPrintOption();
+        BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
         Menu menu = new Menu();
         menu.registerMenuOption(bookPrintOption);
         menu.runOption();
@@ -68,5 +70,17 @@ public class MenuTest {
         menu.registerMenuOption(quitAppOption);
         menu.runOption();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(goodbyeMessage));
+    }
+
+    @Test
+    public void shouldCheckOutBook() {
+        Boolean bookCheckedOut = true;
+        String data = "1";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        Menu menu = new Menu();
+        CheckOutBookOption checkOutOption = new CheckOutBookOption();
+        menu.registerMenuOption(checkOutOption);
+        menu.runOption();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(bookCheckedOut));
     }
 }

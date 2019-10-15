@@ -22,7 +22,7 @@ public class WelcomeMessagePrinterTest {
     public void shouldPrintWelcomeMessage() {
 
         String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n";
-        WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter();
+        WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter(System.out);
         welcomeMessagePrinter.printWelcomeMessage();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(welcomeMessage));
     }

@@ -8,24 +8,27 @@ import com.twu.biblioteca.SampleBooks;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-public class BookPrintOption implements MenuOption {
+import static java.lang.Integer.*;
 
-    private final BookPrinter bookPrinter;
-    List<Book> books = BibliotecaApp.books;
-
-    public BookPrintOption(BookPrinter bookPrinter) {
-        this.bookPrinter = bookPrinter;
-    }
+public class CheckOutBookOption implements MenuOption {
 
     @Override
     public void showOption() {
-        System.out.println("1. Show all books");
+        System.out.println("3. Check out a book");
     }
+    List<Book> books = BibliotecaApp.books;
 
     @Override
     public void runAction() {
         BookPrinter bookPrinter = new BookPrinter();
         bookPrinter.printBooks((ArrayList<Book>) books);
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        int index = parseInt(s) - 1;
+        Book selectedBook = books.get(index);
+        selectedBook.setCheckedOut();
+        books.set(index, selectedBook);
     }
 }
