@@ -3,6 +3,7 @@ package com.twu.biblioteca.MenuTest;
 import com.twu.biblioteca.Book;
 import com.twu.biblioteca.Menu.BookPrintOption;
 import com.twu.biblioteca.Menu.Menu;
+import com.twu.biblioteca.Menu.QuitAppOption;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,10 +51,22 @@ public class MenuTest {
     @Test
     public void shouldNotifyInvalidOptions() {
         String invalidOption = "Please select a valid option!\n";
-        String data = "2";
+        String data = "5";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Menu menu = new Menu();
         menu.runOption();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(invalidOption));
+    }
+
+    @Test
+    public void shouldQuitApplication() {
+        String goodbyeMessage = "You are leaving the app... See you soon!\n";
+        String data = "1";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        Menu menu = new Menu();
+        QuitAppOption quitAppOption = new QuitAppOption();
+        menu.registerMenuOption(quitAppOption);
+        menu.runOption();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(goodbyeMessage));
     }
 }

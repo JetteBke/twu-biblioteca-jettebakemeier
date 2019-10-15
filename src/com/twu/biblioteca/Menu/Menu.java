@@ -25,6 +25,8 @@ public class Menu {
         String s = scanner.nextLine();
         if (s.equals("1")) {
             this.menuOptions.get(0).runAction();
+        } else if (s.equals("2")) {
+            this.menuOptions.get(1).runAction();
         } else {
             System.out.println("Please select a valid option!");
         }
