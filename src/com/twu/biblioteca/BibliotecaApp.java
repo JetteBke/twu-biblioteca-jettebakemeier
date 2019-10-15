@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Menu.BookPrintOption;
 import com.twu.biblioteca.Menu.Menu;
 
 import java.util.ArrayList;
@@ -12,11 +13,9 @@ public class BibliotecaApp {
         WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter();
         welcomeMessagePrinter.printWelcomeMessage();
         Menu menu = new Menu();
-        menu.showBookPrintOption();
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.next();
-        if (s.equals("1")) {
-            menu.selectBookPrintOption();
-        }
+        BookPrintOption bookPrintOption = new BookPrintOption();
+        menu.registerMenuOption(bookPrintOption);
+        menu.printMenu();
+        menu.runOption();
     }
 }
