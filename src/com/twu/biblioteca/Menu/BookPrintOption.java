@@ -8,6 +8,12 @@ import java.util.List;
 
 public class BookPrintOption implements MenuOption {
 
+    private final BookPrinter bookPrinter;
+
+    public BookPrintOption(BookPrinter bookPrinter) {
+        this.bookPrinter = bookPrinter;
+    }
+
     @Override
     public void showOption() {
         System.out.println("1. Show all books");
@@ -22,7 +28,6 @@ public class BookPrintOption implements MenuOption {
         books.add(HarryPotter);
         books.add(HarryPotter2);
         books.add(HarryPotter3);
-        BookPrinter printer = new BookPrinter();
-        printer.printBooks(books);
+        bookPrinter.printBooks(books);
     }
 }

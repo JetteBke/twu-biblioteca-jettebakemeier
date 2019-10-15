@@ -13,11 +13,11 @@ public class BibliotecaApp {
     public static Boolean running = true;
 
     public static void main(String[] args) {
-        WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter();
+        WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter(System.out);
         welcomeMessagePrinter.printWelcomeMessage();
         while (running) {
             Menu menu = new Menu();
-            BookPrintOption bookPrintOption = new BookPrintOption();
+            BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
             QuitAppOption quitAppOption = new QuitAppOption();
             menu.registerMenuOption(bookPrintOption);
             menu.registerMenuOption(quitAppOption);
