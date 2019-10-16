@@ -24,8 +24,8 @@ public class BibliotecaApp {
         QuitAppOption quitAppOption = new QuitAppOption();
         CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
         menu.registerMenuOption(bookPrintOption);
-        menu.registerMenuOption(quitAppOption);
         menu.registerMenuOption(checkOutBookOption);
+        menu.registerMenuOption(quitAppOption);
         while (running) {
             menu.printMenu();
             menu.runOption();

@@ -26,6 +26,6 @@ public class BookPrintOption implements MenuOption {
     @Override
     public void runAction() {
         BookPrinter bookPrinter = new BookPrinter();
-        bookPrinter.printBooks((ArrayList<Book>) books);
+        bookPrinter.printAvailableBooks((ArrayList<Book>) books);
     }
 }

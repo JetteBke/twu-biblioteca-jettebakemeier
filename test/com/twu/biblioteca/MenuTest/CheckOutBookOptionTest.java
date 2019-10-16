@@ -45,4 +45,14 @@ public class CheckOutBookOptionTest {
         checkOutOption.notifySuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
+
+    @Test
+    public void shouldNotifyUnsuccessfulCheckOut() {
+        String notificationMessage = "The book you choose does not exist or is not available!\n";
+        String data = "4";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
+        checkOutBookOption.notifyUnSuccess();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
+    }
 }
