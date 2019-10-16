@@ -42,4 +42,14 @@ public class ReturnBookOptionTest {
         returnBookOption.notifySuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
+
+    @Test
+    public void shouldNotifyUnsuccessfulReturn() {
+        String notificationMessage = "This is not a valid book to return!\n";
+        String data = "1";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        ReturnBookOption returnBookOption = new ReturnBookOption();
+        returnBookOption.notifyUnsuccess();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
+    }
 }

@@ -31,12 +31,16 @@ public class ReturnBookOption implements MenuOption {
                 //toggle checkedOut property
                 book.setCheckedOut();
                 notifySuccess();
-            }
+            } else if (books.size() - 1 == books.indexOf(book)) { notifyUnsuccess(); }
         } );
     }
 
     // public because of testing
     public void notifySuccess() {
         System.out.println("You successfully returned the book!");
+    }
+
+    public void notifyUnsuccess() {
+        System.out.println("This is not a valid book to return!");
     }
 }
