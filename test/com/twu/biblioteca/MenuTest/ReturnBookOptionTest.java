@@ -32,4 +32,14 @@ public class ReturnBookOptionTest {
         BYTE_ARRAY_OUTPUT_STREAM.toString();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(bookCheckedOut));
     }
+
+    @Test
+    public void shouldNotifySuccessfulReturn() {
+        String notificationMessage = "You successfully returned the book!\n";
+        String data = "1";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        ReturnBookOption returnBookOption = new ReturnBookOption();
+        returnBookOption.notifySuccess();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
+    }
 }

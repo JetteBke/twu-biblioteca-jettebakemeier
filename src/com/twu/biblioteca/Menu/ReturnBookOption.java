@@ -30,7 +30,13 @@ public class ReturnBookOption implements MenuOption {
             if (book.getTitle().equals(userInput)) {
                 //toggle checkedOut property
                 book.setCheckedOut();
+                notifySuccess();
             }
         } );
+    }
+
+    // public because of testing
+    public void notifySuccess() {
+        System.out.println("You successfully returned the book!");
     }
 }
