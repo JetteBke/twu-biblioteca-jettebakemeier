@@ -25,14 +25,15 @@ public class ReturnBookOption implements MenuOption {
         String userInput = scanner.nextLine();
         System.out.println("Searching for provided title: " + userInput);
         //iterate through books
-        books.forEach((book) ->  {
-            //find book by user input
-            if (book.getTitle().equals(userInput)) {
-                //toggle checkedOut property
+        for (Book book : books) {//find book by user input
+            if (books.size() - 1 == books.indexOf(book)) {
+                notifyUnsuccess();
+            } else if (book.getTitle().equals(userInput)) {
                 book.setCheckedOut();
                 notifySuccess();
-            } else if (books.size() - 1 == books.indexOf(book)) { notifyUnsuccess(); }
-        } );
+                break;
+            }
+        }
     }
 
     // public because of testing
