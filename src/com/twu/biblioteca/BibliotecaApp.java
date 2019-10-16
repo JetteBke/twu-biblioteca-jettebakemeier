@@ -1,9 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Menu.BookPrintOption;
-import com.twu.biblioteca.Menu.CheckOutBookOption;
-import com.twu.biblioteca.Menu.Menu;
-import com.twu.biblioteca.Menu.QuitAppOption;
+import com.twu.biblioteca.Menu.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +20,10 @@ public class BibliotecaApp {
         BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
         QuitAppOption quitAppOption = new QuitAppOption();
         CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
+        ReturnBookOption returnBookOption = new ReturnBookOption();
         menu.registerMenuOption(bookPrintOption);
         menu.registerMenuOption(checkOutBookOption);
+        menu.registerMenuOption(returnBookOption);
         menu.registerMenuOption(quitAppOption);
         while (running) {
             menu.printMenu();
