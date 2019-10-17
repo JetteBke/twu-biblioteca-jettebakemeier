@@ -34,4 +34,9 @@ public class Movie {
     public String getRating() {
         return rating;
     }
+
+    @Override
+    public String toString() {
+        return "Movie info - title: " + this.title + ", director: " + this.director + ", year: " + this.year + " rating; " + this.rating;
+    }
 }
