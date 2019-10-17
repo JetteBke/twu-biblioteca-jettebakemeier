@@ -15,10 +15,11 @@ public class CheckOutBookOption implements MenuOption {
     public void showOption() {
         System.out.println("2. Check out a book");
     }
-    private List<Book> books = BibliotecaApp.books;
 
     @Override
     public void runAction() {
+        System.out.println("Choose the number of a book to check it out");
+        List<Book> books = BibliotecaApp.books;
         BookPrinter bookPrinter = new BookPrinter();
         bookPrinter.printBooks((ArrayList<Book>) books);
         Scanner scanner = new Scanner(System.in);

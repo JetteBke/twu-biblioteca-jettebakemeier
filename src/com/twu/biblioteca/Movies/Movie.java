@@ -8,6 +8,7 @@ public class Movie {
     private String director;
     private Year year;
     private String rating = "unrated";
+    private Boolean checkedOut = false;
 
     public Movie(String title, String director, Year year) {
         this.title = title;
@@ -35,8 +36,16 @@ public class Movie {
         return rating;
     }
 
+    public Boolean getCheckedOut() {
+        return checkedOut;
+    }
+
+    public void setCheckedOut() {
+        checkedOut = !checkedOut;
+    }
+
     @Override
     public String toString() {
-        return "Movie info - title: " + this.title + ", director: " + this.director + ", year: " + this.year + " rating; " + this.rating;
+        return "Movie info - title: " + this.title + ", director: " + this.director + ", year: " + this.year + " rating; " + this.rating + ", checked out: " + this.checkedOut;
     }
 }

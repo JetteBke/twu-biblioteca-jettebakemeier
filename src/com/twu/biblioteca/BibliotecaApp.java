@@ -27,11 +27,13 @@ public class BibliotecaApp {
         CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
         ReturnBookOption returnBookOption = new ReturnBookOption();
         MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
+        CheckOutMovieOption checkOutMovieOption = new CheckOutMovieOption();
         QuitAppOption quitAppOption = new QuitAppOption();
         menu.registerMenuOption(bookPrintOption);
         menu.registerMenuOption(checkOutBookOption);
         menu.registerMenuOption(returnBookOption);
         menu.registerMenuOption(moviePrintOption);
+        menu.registerMenuOption(checkOutMovieOption);
         menu.registerMenuOption(quitAppOption);
         while (running) {
             menu.printMenu();
