@@ -31,6 +31,8 @@ public class Menu {
             this.menuOptions.get(2).runAction();
         } else if (s.equals("4")) {
             this.menuOptions.get(3).runAction();
+        } else if (s.equals("5")) {
+            this.menuOptions.get(4).runAction();
         } else {
             System.out.println("Please select a valid option!");
         }

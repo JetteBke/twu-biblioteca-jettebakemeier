@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class MoviePrinter {
 
     public void printMovies(ArrayList<Movie> Movies) {
+
         Movies.forEach((Movie) -> System.out.println(Movie.toString()));
     }
 

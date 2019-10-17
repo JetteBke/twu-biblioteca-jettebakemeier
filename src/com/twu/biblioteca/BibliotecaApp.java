@@ -4,13 +4,18 @@ import com.twu.biblioteca.Books.Book;
 import com.twu.biblioteca.Books.BookPrinter;
 import com.twu.biblioteca.Books.SampleBooks;
 import com.twu.biblioteca.Menu.*;
+import com.twu.biblioteca.Movies.Movie;
+import com.twu.biblioteca.Movies.MoviePrinter;
+import com.twu.biblioteca.Movies.SampleMovies;
 
 import java.util.List;
 
 public class BibliotecaApp {
 
     private static SampleBooks sampleBooks = new SampleBooks();
+    private static SampleMovies sampleMovies = new SampleMovies();
     public static List<Book> books = sampleBooks.Sample();
+    public static List<Movie> movies = sampleMovies.Sample();
 
     public static Boolean running = true;
 
@@ -19,12 +24,14 @@ public class BibliotecaApp {
         welcomeMessagePrinter.printWelcomeMessage();
         Menu menu = new Menu();
         BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
-        QuitAppOption quitAppOption = new QuitAppOption();
         CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
         ReturnBookOption returnBookOption = new ReturnBookOption();
+        MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
+        QuitAppOption quitAppOption = new QuitAppOption();
         menu.registerMenuOption(bookPrintOption);
         menu.registerMenuOption(checkOutBookOption);
         menu.registerMenuOption(returnBookOption);
+        menu.registerMenuOption(moviePrintOption);
         menu.registerMenuOption(quitAppOption);
         while (running) {
             menu.printMenu();
