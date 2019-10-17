@@ -7,6 +7,8 @@ import com.twu.biblioteca.Menu.*;
 import com.twu.biblioteca.Movies.Movie;
 import com.twu.biblioteca.Movies.MoviePrinter;
 import com.twu.biblioteca.Movies.SampleMovies;
+import com.twu.biblioteca.User.SampleUsers;
+import com.twu.biblioteca.User.User;
 
 import java.util.List;
 
@@ -14,14 +16,18 @@ public class BibliotecaApp {
 
     private static SampleBooks sampleBooks = new SampleBooks();
     private static SampleMovies sampleMovies = new SampleMovies();
+    private static SampleUsers sampleUsers = new SampleUsers();
     public static List<Book> books = sampleBooks.Sample();
     public static List<Movie> movies = sampleMovies.Sample();
+    public static List<User> users = sampleUsers.Sample();
 
     public static Boolean running = true;
 
     public static void main(String[] args) {
         WelcomeMessagePrinter welcomeMessagePrinter = new WelcomeMessagePrinter(System.out);
         welcomeMessagePrinter.printWelcomeMessage();
+        Login login = new Login();
+        login.askForCredentials();
         Menu menu = new Menu();
         BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
         CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
