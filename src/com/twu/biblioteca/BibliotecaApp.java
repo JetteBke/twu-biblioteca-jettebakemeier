@@ -1,10 +1,11 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Books.Book;
+import com.twu.biblioteca.Books.BookPrinter;
+import com.twu.biblioteca.Books.SampleBooks;
 import com.twu.biblioteca.Menu.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class BibliotecaApp {
 

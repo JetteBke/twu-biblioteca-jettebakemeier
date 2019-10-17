@@ -1,8 +1,8 @@
 package com.twu.biblioteca.Menu;
 
 import com.twu.biblioteca.BibliotecaApp;
-import com.twu.biblioteca.Book;
-import com.twu.biblioteca.BookPrinter;
+import com.twu.biblioteca.Books.Book;
+import com.twu.biblioteca.Books.BookPrinter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
