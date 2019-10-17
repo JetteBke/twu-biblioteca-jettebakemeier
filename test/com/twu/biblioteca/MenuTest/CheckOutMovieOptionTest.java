@@ -22,6 +22,11 @@ public class CheckOutMovieOptionTest {
         System.setOut(new PrintStream(BYTE_ARRAY_OUTPUT_STREAM));
     }
 
+    @Test
+    public void shouldShowOption() {
+
+    }
+
     //don't know how to extract the checkout variable of the selected movie inside the BYTE_ARRAY_OUTPUT_STREAM
     @Test
     public void shouldCheckOutMovie() {

@@ -19,11 +19,11 @@ public class MoviePrintOption implements MenuOption {
 
     @Override
     public void showOption() {
-        System.out.println("4. Show all movies!");
+        System.out.println("4. Show all movies");
     }
 
     @Override
     public void runAction() {
-        moviePrinter.printMovies((ArrayList<Movie>) movies);
+        moviePrinter.printAvailableMovies((ArrayList<Movie>) movies);
     }
 }

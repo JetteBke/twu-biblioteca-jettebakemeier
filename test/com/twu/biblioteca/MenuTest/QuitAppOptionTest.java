@@ -21,6 +21,7 @@ public class QuitAppOptionTest {
         BYTE_ARRAY_OUTPUT_STREAM = new ByteArrayOutputStream();
         System.setOut(new PrintStream(BYTE_ARRAY_OUTPUT_STREAM));
     }
+
     @Test
     public void shouldQuitApplication() {
         String goodbyeMessage = "You are leaving the app... See you soon!\n";

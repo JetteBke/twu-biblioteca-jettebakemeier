@@ -27,7 +27,7 @@ public class MoviePrintOptionTest {
 
     @Test
     public void shouldDisplayMoviePrintOption() {
-        String menuOption = "4. Show all movies!\n";
+        String menuOption = "4. Show all movies\n";
         MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
         Menu menu = new Menu();
         menu.registerMenuOption(moviePrintOption);

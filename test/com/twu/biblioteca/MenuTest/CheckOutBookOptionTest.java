@@ -1,8 +1,6 @@
 package com.twu.biblioteca.MenuTest;
 
-import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.CheckOutBookOption;
-import com.twu.biblioteca.Menu.Menu;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +8,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static com.twu.biblioteca.BibliotecaApp.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 

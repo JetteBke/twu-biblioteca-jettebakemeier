@@ -9,11 +9,11 @@ public class MoviePrinter {
         Movies.forEach((Movie) -> System.out.println(Movie.toString()));
     }
 
-/*    public void printAvailableMovies(ArrayList<Movie> Movies) {
+    public void printAvailableMovies(ArrayList<Movie> Movies) {
 
         Movies.forEach(movie -> { if (movie.getCheckedOut() == false) {
             System.out.println(movie.toString());
         }
         });
-    }*/
+    }
 }

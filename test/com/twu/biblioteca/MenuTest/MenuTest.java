@@ -24,7 +24,7 @@ public class MenuTest {
     @Test
     public void shouldNotifyInvalidOptions() {
         String invalidOption = "Please select a valid option!\n";
-        String data = "5";
+        String data = "8";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Menu menu = new Menu();
         menu.runOption();
