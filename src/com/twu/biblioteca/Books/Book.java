@@ -47,9 +47,12 @@ public class Book {
 
     public void setCheckOutUser(User user) { this.checkOutUser = user; }
 
-
     @Override
     public String toString() {
-        return "Book info - title: " + this.title + ", author: " + this.author + ", year: " + this.year + " checked out: " + this.checkedOut;
+        String libraryNumber = "";
+        if (checkOutUser != null) {
+            libraryNumber = ", by library number " + this.checkOutUser.getLibraryNumber();
+        }
+        return "Book info - title: " + this.title + ", author: " + this.author + ", year: " + this.year + " checked out: " + this.checkedOut + libraryNumber;
     }
 }
