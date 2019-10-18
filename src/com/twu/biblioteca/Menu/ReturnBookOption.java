@@ -2,11 +2,18 @@ package com.twu.biblioteca.Menu;
 
 import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Books.Book;
+import com.twu.biblioteca.User.User;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class ReturnBookOption implements MenuOption {
+
+    private User currentUser;
+
+    public ReturnBookOption(User currentUser) {
+        currentUser = currentUser;
+    }
 
     @Override
     public void showOption() {
@@ -27,9 +34,9 @@ public class ReturnBookOption implements MenuOption {
         //iterate through books
         for (Book book : books) {//find book by user input
             if (books.size() - 1 == books.indexOf(book)) {
-                notifyUnsuccess();
-            } else if (book.getTitle().equals(userInput)) {
-                book.setCheckedOut();
+                notifyUnSuccess();
+            } else if (book.getTitle().equals(userInput) && (book.getCheckOutUser() == currentUser)) {
+                book.returnBook();
                 notifySuccess();
                 break;
             }
@@ -41,7 +48,7 @@ public class ReturnBookOption implements MenuOption {
         System.out.println("You successfully returned the book!");
     }
 
-    public void notifyUnsuccess() {
+    public void notifyUnSuccess() {
         System.out.println("This is not a valid book to return!");
     }
 }

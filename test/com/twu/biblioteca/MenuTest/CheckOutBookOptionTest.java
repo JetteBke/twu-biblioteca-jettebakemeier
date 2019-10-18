@@ -1,6 +1,8 @@
 package com.twu.biblioteca.MenuTest;
 
+import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.CheckOutBookOption;
+import com.twu.biblioteca.User.User;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,7 +29,7 @@ public class CheckOutBookOptionTest {
         Boolean bookCheckedOut = true;
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        CheckOutBookOption checkOutOption = new CheckOutBookOption();
+        CheckOutBookOption checkOutOption = new CheckOutBookOption(BibliotecaApp.users.get(0));
         checkOutOption.runAction();
         BYTE_ARRAY_OUTPUT_STREAM.toString();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(bookCheckedOut));
@@ -38,7 +40,7 @@ public class CheckOutBookOptionTest {
         String notificationMessage = "You successfully checked out the book!\n";
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        CheckOutBookOption checkOutOption = new CheckOutBookOption();
+        CheckOutBookOption checkOutOption = new CheckOutBookOption(BibliotecaApp.users.get(0));
         checkOutOption.notifySuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
@@ -48,7 +50,7 @@ public class CheckOutBookOptionTest {
         String notificationMessage = "The book you choose does not exist or is not available!\n";
         String data = "4";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
+        CheckOutBookOption checkOutBookOption = new CheckOutBookOption(BibliotecaApp.users.get(0));
         checkOutBookOption.notifyUnSuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }

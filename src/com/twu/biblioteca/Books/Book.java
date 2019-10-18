@@ -1,5 +1,7 @@
 package com.twu.biblioteca.Books;
 
+import com.twu.biblioteca.User.User;
+
 import java.time.Year;
 
 public class Book {
@@ -8,6 +10,7 @@ public class Book {
     private String author;
     private Year year;
     private Boolean checkedOut = false;
+    private User checkOutUser = null;
 
     public Book(String title, String author, Year year) {
         this.title = title;
@@ -33,7 +36,17 @@ public class Book {
 
     public Boolean getCheckedOut() { return checkedOut; }
 
-    public void setCheckedOut() { checkedOut = !checkedOut; }
+    public User getCheckOutUser() { return checkOutUser; }
+
+    public void checkOutBook() { checkedOut = true; }
+
+    public void returnBook() {
+        checkedOut = false;
+        checkOutUser = null;
+    }
+
+    public void setCheckOutUser(User user) { this.checkOutUser = user; }
+
 
     @Override
     public String toString() {

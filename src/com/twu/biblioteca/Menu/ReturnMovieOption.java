@@ -24,9 +24,9 @@ public class ReturnMovieOption implements MenuOption {
         System.out.println("Searching for provided title: " + userInput);
         for (Movie movie : movies) {
             if (movies.size() - 1 == movies.indexOf(movie)) {
-                notifyUnsuccess();
+                notifyUnSuccess();
             } else if (movie.getTitle().equals(userInput)) {
-                movie.setCheckedOut();
+                movie.returnMovie();
                 notifySuccess();
                 break;
             }
@@ -38,7 +38,7 @@ public class ReturnMovieOption implements MenuOption {
         System.out.println("You successfully returned the movie!");
     }
 
-    public void notifyUnsuccess() {
+    public void notifyUnSuccess() {
         System.out.println("This is not a valid movie to return!");
     }
 }

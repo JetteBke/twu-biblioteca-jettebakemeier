@@ -1,5 +1,6 @@
 package com.twu.biblioteca.MenuTest;
 
+import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.CheckOutBookOption;
 import com.twu.biblioteca.Menu.ReturnBookOption;
 import org.junit.Before;
@@ -27,7 +28,7 @@ public class ReturnBookOptionTest {
         Boolean bookCheckedOut = false;
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        ReturnBookOption returnBookOption = new ReturnBookOption();
+        ReturnBookOption returnBookOption = new ReturnBookOption(BibliotecaApp.users.get(0));
         returnBookOption.runAction();
         BYTE_ARRAY_OUTPUT_STREAM.toString();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(bookCheckedOut));
@@ -38,7 +39,7 @@ public class ReturnBookOptionTest {
         String notificationMessage = "You successfully returned the book!\n";
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        ReturnBookOption returnBookOption = new ReturnBookOption();
+        ReturnBookOption returnBookOption = new ReturnBookOption(BibliotecaApp.users.get(0));
         returnBookOption.notifySuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
@@ -48,8 +49,8 @@ public class ReturnBookOptionTest {
         String notificationMessage = "This is not a valid book to return!\n";
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        ReturnBookOption returnBookOption = new ReturnBookOption();
-        returnBookOption.notifyUnsuccess();
+        ReturnBookOption returnBookOption = new ReturnBookOption(BibliotecaApp.users.get(0));
+        returnBookOption.notifyUnSuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
 }

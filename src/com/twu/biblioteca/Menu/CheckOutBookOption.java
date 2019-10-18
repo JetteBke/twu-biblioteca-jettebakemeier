@@ -3,6 +3,8 @@ package com.twu.biblioteca.Menu;
 import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Books.Book;
 import com.twu.biblioteca.Books.BookPrinter;
+import com.twu.biblioteca.User.User;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,6 +12,12 @@ import java.util.Scanner;
 import static java.lang.Integer.*;
 
 public class CheckOutBookOption implements MenuOption {
+
+    private User currentUser;
+
+    public CheckOutBookOption(User currentUser) {
+        this.currentUser = currentUser;
+    }
 
     @Override
     public void showOption() {
@@ -29,7 +37,8 @@ public class CheckOutBookOption implements MenuOption {
         if(selectedBook.getCheckedOut()) {
             notifyUnSuccess();
         } else {
-            selectedBook.setCheckedOut();
+            selectedBook.checkOutBook();
+            selectedBook.setCheckOutUser(currentUser);
             books.set(index, selectedBook);
             notifySuccess();
         }

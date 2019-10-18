@@ -59,7 +59,7 @@ public class ReturnMovieOptionTest {
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         ReturnMovieOption returnMovieOption = new ReturnMovieOption();
-        returnMovieOption.notifyUnsuccess();
+        returnMovieOption.notifyUnSuccess();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(notificationMessage));
     }
 }

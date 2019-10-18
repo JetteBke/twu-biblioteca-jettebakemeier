@@ -32,7 +32,7 @@ public class CheckOutMovieOption implements MenuOption {
         if(selectedMovie.getCheckedOut()) {
             notifyUnSuccess();
         } else {
-            selectedMovie.setCheckedOut();
+            selectedMovie.checkOutMovie();
             movies.set(index, selectedMovie);
             notifySuccess();
         }

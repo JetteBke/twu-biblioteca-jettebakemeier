@@ -21,6 +21,7 @@ public class BibliotecaApp {
     public static List<Movie> movies = sampleMovies.Sample();
     public static List<User> users = sampleUsers.Sample();
 
+
     public static Boolean running = true;
 
     public static void main(String[] args) {
@@ -28,24 +29,28 @@ public class BibliotecaApp {
         welcomeMessagePrinter.printWelcomeMessage();
         Login login = new Login();
         login.askForCredentials();
-        Menu menu = new Menu();
-        BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
-        CheckOutBookOption checkOutBookOption = new CheckOutBookOption();
-        ReturnBookOption returnBookOption = new ReturnBookOption();
-        MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
-        CheckOutMovieOption checkOutMovieOption = new CheckOutMovieOption();
-        ReturnMovieOption returnMovieOption = new ReturnMovieOption();
-        QuitAppOption quitAppOption = new QuitAppOption();
-        menu.registerMenuOption(bookPrintOption);
-        menu.registerMenuOption(checkOutBookOption);
-        menu.registerMenuOption(returnBookOption);
-        menu.registerMenuOption(moviePrintOption);
-        menu.registerMenuOption(checkOutMovieOption);
-        menu.registerMenuOption(returnMovieOption);
-        menu.registerMenuOption(quitAppOption);
-        while (running) {
-            menu.printMenu();
-            menu.runOption();
+        if (login.tries < 2) {
+            User currentUser = login.currentUser;
+            Menu menu = new Menu();
+            BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
+            CheckOutBookOption checkOutBookOption = new CheckOutBookOption(currentUser);
+            ReturnBookOption returnBookOption = new ReturnBookOption(currentUser);
+            MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
+            CheckOutMovieOption checkOutMovieOption = new CheckOutMovieOption();
+            ReturnMovieOption returnMovieOption = new ReturnMovieOption();
+            QuitAppOption quitAppOption = new QuitAppOption();
+            menu.registerMenuOption(bookPrintOption);
+            menu.registerMenuOption(checkOutBookOption);
+            menu.registerMenuOption(returnBookOption);
+            menu.registerMenuOption(moviePrintOption);
+            menu.registerMenuOption(checkOutMovieOption);
+            menu.registerMenuOption(returnMovieOption);
+            menu.registerMenuOption(quitAppOption);
+            while (running) {
+                menu.printMenu();
+                menu.runOption();
+            }
         }
+        else { System.out.println("You typed in the wrong credentials for too many times...");}
     }
 }

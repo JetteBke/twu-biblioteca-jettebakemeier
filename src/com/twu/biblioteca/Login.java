@@ -9,7 +9,9 @@ public class Login {
 
     private String InputLibraryNumber;
     private String InputPassword;
+    public User currentUser;
     private List<User> users = BibliotecaApp.users;
+    public Integer tries = 0;
 
     public void askForCredentials() {
         System.out.println("Please provide your library number below:");
@@ -20,12 +22,14 @@ public class Login {
         runLogin();
     }
     public void runLogin() {
-        for (User item : users) {
-            if (InputLibraryNumber.equals(item.getLibraryNumber()) && InputPassword.equals(item.getPassword())) {
+        for (User user : users) {
+            if (InputLibraryNumber.equals(user.getLibraryNumber()) && InputPassword.equals(user.getPassword())) {
                 System.out.println("You successfully logged in");
+                currentUser = user;
                 break;
-            } else if (users.indexOf(item) == (users.size() - 1)){
+            } else if (users.indexOf(user) == (users.size() - 1) && tries < 2){
                 System.out.println("Your credentials were not correct");
+                tries++;
                 askForCredentials();
             }
         }

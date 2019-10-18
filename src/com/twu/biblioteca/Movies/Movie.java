@@ -40,9 +40,11 @@ public class Movie {
         return checkedOut;
     }
 
-    public void setCheckedOut() {
-        checkedOut = !checkedOut;
+    public void checkOutMovie() {
+        checkedOut = true;
     }
+
+    public void returnMovie() { checkedOut = false; }
 
     @Override
     public String toString() {
