@@ -1,7 +1,8 @@
 package com.twu.biblioteca.MenuTest;
 
 import com.twu.biblioteca.BibliotecaApp;
-import com.twu.biblioteca.Menu.CheckOutBookOption;
+import com.twu.biblioteca.Books.Book;
+import com.twu.biblioteca.Menu.Menu;
 import com.twu.biblioteca.Menu.ReturnBookOption;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,16 +23,27 @@ public class ReturnBookOptionTest {
         System.setOut(new PrintStream(BYTE_ARRAY_OUTPUT_STREAM));
     }
 
-    //don't know how to extract the checkout variable of the selected book inside the BYTE_ARRAY_OUTPUT_STREAM
+    @Test
+    public void shouldDisplayOption() {
+        String menuOption = "3. Return a book\n";
+        ReturnBookOption returnBookOption = new ReturnBookOption(BibliotecaApp.users.get(0));
+        Menu menu = new Menu();
+        menu.registerMenuOption(returnBookOption);
+        menu.printMenu();
+        assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(menuOption));
+    }
+
     @Test
     public void shouldReturnBook() {
-        Boolean bookCheckedOut = false;
-        String data = "1";
+        Book book = BibliotecaApp.books.get(0);
+        book.checkOutBook();
+
+        String data = "Harry Potter";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         ReturnBookOption returnBookOption = new ReturnBookOption(BibliotecaApp.users.get(0));
         returnBookOption.runAction();
-        BYTE_ARRAY_OUTPUT_STREAM.toString();
-        assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(bookCheckedOut));
+
+        assertThat(book.getCheckedOut(), is(false));
     }
 
     @Test

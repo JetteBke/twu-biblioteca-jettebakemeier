@@ -1,7 +1,9 @@
 package com.twu.biblioteca.MenuTest;
 
+import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.Menu;
 import com.twu.biblioteca.Menu.ReturnMovieOption;
+import com.twu.biblioteca.Movies.Movie;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -34,13 +36,15 @@ public class ReturnMovieOptionTest {
 
     @Test
     public void shouldReturnMovie() {
-        Boolean movieCheckedOut = false;
-        String data = "1";
+        Movie movie = BibliotecaApp.movies.get(0);
+        movie.checkOutMovie();
+
+        String data = "Verblendung";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         ReturnMovieOption returnMovieOption = new ReturnMovieOption();
         returnMovieOption.runAction();
-        BYTE_ARRAY_OUTPUT_STREAM.toString();
-        assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(movieCheckedOut));
+
+        assertThat(movie.getCheckedOut(), is(false));
     }
 
     @Test
