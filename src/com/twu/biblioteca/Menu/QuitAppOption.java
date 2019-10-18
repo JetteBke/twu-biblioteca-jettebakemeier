@@ -7,7 +7,7 @@ public class QuitAppOption implements MenuOption {
 
     @Override
     public void showOption() {
-        System.out.println("7. Quit Application");
+        System.out.println("8. Quit Application");
     }
 
     @Override

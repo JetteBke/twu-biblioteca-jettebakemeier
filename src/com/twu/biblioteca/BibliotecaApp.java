@@ -38,6 +38,7 @@ public class BibliotecaApp {
             MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
             CheckOutMovieOption checkOutMovieOption = new CheckOutMovieOption();
             ReturnMovieOption returnMovieOption = new ReturnMovieOption();
+            ViewInfoOption viewInfoOption = new ViewInfoOption(currentUser);
             QuitAppOption quitAppOption = new QuitAppOption();
             menu.registerMenuOption(bookPrintOption);
             menu.registerMenuOption(checkOutBookOption);
@@ -45,6 +46,7 @@ public class BibliotecaApp {
             menu.registerMenuOption(moviePrintOption);
             menu.registerMenuOption(checkOutMovieOption);
             menu.registerMenuOption(returnMovieOption);
+            menu.registerMenuOption(viewInfoOption);
             menu.registerMenuOption(quitAppOption);
             while (running) {
                 menu.printMenu();
