@@ -20,6 +20,15 @@ public class CheckOutBookOption implements MenuOption {
     }
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("2")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("2. Check out a book");
     }

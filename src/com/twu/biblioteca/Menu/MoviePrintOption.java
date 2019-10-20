@@ -18,6 +18,15 @@ public class MoviePrintOption implements MenuOption {
     }
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("4")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("4. Show all movies");
     }

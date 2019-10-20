@@ -1,5 +1,6 @@
 package com.twu.biblioteca.MenuTest;
 
+import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.Menu;
 import com.twu.biblioteca.Menu.MoviePrintOption;
 import com.twu.biblioteca.Movies.Movie;
@@ -37,13 +38,14 @@ public class MoviePrintOptionTest {
 
     @Test
     public void shouldRunMoviePrintOption() {
-        String data = "1";
+        String data = "4";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
+        BibliotecaApp.movies.get(0).returnMovie(); // return movie so that it's marked as available, why is it not the same problem for the book print option?
         Movie Verblendung = new Movie("Verblendung", "David Fincher", Year.parse("2010"));
         Movie HarryPotter = new Movie("Harry Potter and the chamber of secrets", "JK Rolling", "2002");
         Movie WhiteChicks = new Movie("White Chicks", "Someone", "2001");
-        Menu menu = new Menu();
         MoviePrintOption moviePrintOption = new MoviePrintOption(new MoviePrinter());
+        Menu menu = new Menu();
         menu.registerMenuOption(moviePrintOption);
         menu.runOption();
         assertThat(BYTE_ARRAY_OUTPUT_STREAM.toString(), is(Verblendung.toString()+System.lineSeparator()+HarryPotter.toString()+System.lineSeparator()+WhiteChicks.toString()+System.lineSeparator()));

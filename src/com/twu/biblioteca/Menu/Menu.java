@@ -23,23 +23,15 @@ public class Menu {
     public void runOption() {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
-        if (s.equals("1")) {
-            this.menuOptions.get(0).runAction();
-        } else if (s.equals("2")) {
-            this.menuOptions.get(1).runAction();
-        } else if (s.equals("3")) {
-            this.menuOptions.get(2).runAction();
-        } else if (s.equals("4")) {
-            this.menuOptions.get(3).runAction();
-        } else if (s.equals("5")) {
-            this.menuOptions.get(4).runAction();
-        } else if (s.equals("6")) {
-            this.menuOptions.get(5).runAction();
-        } else if (s.equals("7")) {
-            this.menuOptions.get(6).runAction();
-        } else if (s.equals("8")) {
-            this.menuOptions.get(7).runAction();
-        } else {
+        boolean somethingWasRun = false;
+        for (MenuOption menuOption: menuOptions) {
+            if (menuOption.thisInputIsForMe(s)) {
+                menuOption.runAction();
+                somethingWasRun = true;
+            }
+        }
+
+        if (!somethingWasRun) {
             System.out.println("Please select a valid option!");
         }
     }

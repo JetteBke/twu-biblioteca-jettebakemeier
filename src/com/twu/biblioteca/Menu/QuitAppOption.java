@@ -6,6 +6,15 @@ public class QuitAppOption implements MenuOption {
 
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("8")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("8. Quit Application");
     }

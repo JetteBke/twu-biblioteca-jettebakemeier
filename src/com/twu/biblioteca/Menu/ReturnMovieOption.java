@@ -10,6 +10,15 @@ import java.util.Scanner;
 public class ReturnMovieOption implements MenuOption {
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("6")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("6. Return a movie");
     }

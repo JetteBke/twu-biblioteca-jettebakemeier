@@ -15,6 +15,15 @@ public class CheckOutMovieOption implements MenuOption {
 
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("5")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("5. Check out a movie");
     }

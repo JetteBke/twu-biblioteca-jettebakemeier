@@ -25,7 +25,7 @@ public class QuitAppOptionTest {
     @Test
     public void shouldQuitApplication() {
         String goodbyeMessage = "You are leaving the app... See you soon!\n";
-        String data = "1";
+        String data = "8";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Menu menu = new Menu();
         QuitAppOption quitAppOption = new QuitAppOption();

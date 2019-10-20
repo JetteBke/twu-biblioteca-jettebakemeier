@@ -12,6 +12,15 @@ public class ViewInfoOption implements MenuOption {
     }
 
     @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("7")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public void showOption() {
         System.out.println("7. See personal information");
     }

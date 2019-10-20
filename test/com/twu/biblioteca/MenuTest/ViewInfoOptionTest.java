@@ -4,6 +4,7 @@ import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.Menu;
 import com.twu.biblioteca.Menu.ViewInfoOption;
 
+import com.twu.biblioteca.User.User;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,10 +36,11 @@ public class ViewInfoOptionTest {
 
     @Test
     public void shouldRunViewInfoOption() {
-        String userInfo = "name: " + BibliotecaApp.users.get(0).getName() + "\nemail: " + BibliotecaApp.users.get(0).getEmail() + "\nphone number: " + BibliotecaApp.users.get(0).getPhoneNumber() + "\n";
-        String data = "1";
+        User user = BibliotecaApp.users.get(0);
+        String userInfo = "name: " + user.getName() + "\nemail: " + user.getEmail() + "\nphone number: " + user.getPhoneNumber() + "\n";
+        String data = "7";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
-        ViewInfoOption viewInfoOption = new ViewInfoOption(BibliotecaApp.users.get(0));
+        ViewInfoOption viewInfoOption = new ViewInfoOption(user);
         Menu menu = new Menu();
         menu.registerMenuOption(viewInfoOption);
         menu.runOption();

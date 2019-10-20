@@ -12,7 +12,16 @@ public class ReturnBookOption implements MenuOption {
     private User currentUser;
 
     public ReturnBookOption(User currentUser) {
-        currentUser = currentUser;
+        this.currentUser = currentUser;
+    }
+
+    @Override
+    public boolean thisInputIsForMe(String s) {
+        if(s.equals("3")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -25,17 +34,14 @@ public class ReturnBookOption implements MenuOption {
 
     @Override
     public void runAction() {
-        //prompt user for input
         System.out.println("Whats the title of the book you want to return?");
         Scanner scanner = new Scanner(System.in);
-        //save input
         String userInput = scanner.nextLine();
         System.out.println("Searching for provided title: " + userInput);
-        //iterate through books
-        for (Book book : books) {//find book by user input
+        for (Book book : books) {
             if (books.size() - 1 == books.indexOf(book)) {
                 notifyUnSuccess();
-            } else if (book.getTitle().equals(userInput) && (book.getCheckOutUser() == currentUser)) {
+            } else if (book.getTitle().equals(userInput) && (currentUser.equals(book.getCheckOutUser()))) {
                 book.returnBook();
                 notifySuccess();
                 break;

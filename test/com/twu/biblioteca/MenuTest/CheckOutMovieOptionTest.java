@@ -29,7 +29,6 @@ public class CheckOutMovieOptionTest {
 
     }
 
-    //don't know how to extract the checkout variable of the selected movie inside the BYTE_ARRAY_OUTPUT_STREAM
     @Test
     public void shouldCheckOutMovie() {
         Movie movie = BibliotecaApp.movies.get(0);

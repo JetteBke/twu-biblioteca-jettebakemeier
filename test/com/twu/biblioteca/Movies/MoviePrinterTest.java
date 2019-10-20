@@ -1,8 +1,5 @@
 package com.twu.biblioteca.Movies;
 
-import com.twu.biblioteca.Books.Book;
-import com.twu.biblioteca.Books.BookPrinter;
-import com.twu.biblioteca.Books.SampleBooks;
 import org.junit.Before;
 import org.junit.Test;
 

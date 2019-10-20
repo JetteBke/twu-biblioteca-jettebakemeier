@@ -29,7 +29,7 @@ public class BibliotecaApp {
         welcomeMessagePrinter.printWelcomeMessage();
         Login login = new Login();
         login.askForCredentials();
-        if (login.tries < 2) {
+        if (login.tries < 3) {
             User currentUser = login.currentUser;
             Menu menu = new Menu();
             BookPrintOption bookPrintOption = new BookPrintOption(new BookPrinter());
