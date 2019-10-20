@@ -42,14 +42,17 @@ public class CheckOutBookOption implements MenuOption {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
         int index = parseInt(s) - 1;
-        Book selectedBook = books.get(index);
-        if(selectedBook.getCheckedOut()) {
-            notifyUnSuccess();
-        } else {
-            selectedBook.checkOutBook();
-            selectedBook.setCheckOutUser(currentUser);
-            books.set(index, selectedBook);
-            notifySuccess();
+        if (index < 2) {
+            Book selectedBook = books.get(index);
+            if(selectedBook.getCheckedOut()) {
+                selectedBook.checkOutBook();
+                selectedBook.setCheckOutUser(currentUser);
+                books.set(index, selectedBook);
+                notifySuccess();
+            } else {
+                notifyUnSuccess();
+            }
+        } else { notifyUnSuccess();
         }
     }
 

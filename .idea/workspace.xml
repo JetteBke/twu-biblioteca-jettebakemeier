@@ -3,33 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d7699633-b878-45d4-afce-7177b9c17dbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/BookPrintOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/BookPrintOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/CheckOutBookOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/CheckOutBookOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/CheckOutMovieOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/CheckOutMovieOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/MenuOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/MenuOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/MoviePrintOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/MoviePrintOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/QuitAppOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/QuitAppOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ReturnBookOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ReturnBookOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ReturnMovieOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ReturnMovieOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ViewInfoOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu/ViewInfoOption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/BookPrintOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/BookPrintOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutBookOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutBookOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutMovieOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutMovieOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MenuOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MenuOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MoviePrintOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/MoviePrintOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/QuitAppOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/QuitAppOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ReturnBookOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ReturnBookOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ReturnMovieOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ReturnMovieOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ViewInfoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ViewInfoOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/CheckOutMovieOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/CheckOutMovieOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/MoviePrintOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/MoviePrintOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/QuitAppOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/QuitAppOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/ViewInfoOptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuTest/ViewInfoOptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/Movies/MoviePrinterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/Movies/MoviePrinterTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +175,7 @@
       <workItem from="1571235460529" duration="1524000" />
       <workItem from="1571296427557" duration="20067000" />
       <workItem from="1571384543120" duration="10064000" />
-      <workItem from="1571553890315" duration="6334000" />
+      <workItem from="1571553890315" duration="6924000" />
     </task>
     <servers />
   </component>
@@ -228,21 +202,6 @@
           <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/ReturnBookOption.java</url>
           <line>40</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutBookOption.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutBookOption.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/Menu/CheckOutBookOption.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
