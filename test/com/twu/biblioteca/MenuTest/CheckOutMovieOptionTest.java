@@ -1,7 +1,9 @@
 package com.twu.biblioteca.MenuTest;
 
+import com.twu.biblioteca.BibliotecaApp;
 import com.twu.biblioteca.Menu.CheckOutBookOption;
 import com.twu.biblioteca.Menu.CheckOutMovieOption;
+import com.twu.biblioteca.Movies.Movie;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,13 +32,14 @@ public class CheckOutMovieOptionTest {
     //don't know how to extract the checkout variable of the selected movie inside the BYTE_ARRAY_OUTPUT_STREAM
     @Test
     public void shouldCheckOutMovie() {
-        Boolean movieCheckedOut = true;
+        Movie movie = BibliotecaApp.movies.get(0);
+
         String data = "1";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         CheckOutMovieOption checkOutOption = new CheckOutMovieOption();
         checkOutOption.runAction();
-        BYTE_ARRAY_OUTPUT_STREAM.toString();
-        assertThat(BYTE_ARRAY_OUTPUT_STREAM, is(movieCheckedOut));
+
+        assertThat(movie.getCheckedOut(), is(true));
     }
 
     @Test
